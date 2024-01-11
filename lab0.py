@@ -51,19 +51,19 @@ class Product:
         
     def make_purchase(self, balance, quanity):
         if self.name == "shirt":
-            self.balance = self.balance - 50 * self.quanity
+            return(balance - 50 * quanity)
             
         if self.name == "textbook":
-            self.balance = self.balance - 80 * self.quanity
+            return(balance - 80 * quanity)
             
         if self.name == "history book":
-            self.balance = self.balance - 50 * self.quanity
+            return(balance - 50 * quanity)
             
         if self.name == "memory card":
-            self.balance = self.balance - 140 * self.quanity
+            return(balance - 140 * quanity)
             
         if self.name == "wrist watch":
-            self.balance = self.balance - 120 * self.quanity
+            return(balance - 120 * quanity)
 
 # Question 3
 class Converter:
@@ -217,6 +217,39 @@ print(p1.getPrice())
 
 p2 = Product("textbook", 80, 10)
 print(p2.getPrice())
+
+p3 = Product("history book", 50, 100)
+
+# price test cases
+p1.getPrice()
+p2.getPrice()
+p3.getPrice()
+
+# make_purchase test cases
+p1.make_purchase(1000, 5)
+
+p2.make_purchase(1000, 10)
+
+
+
+# q3 test cases
+meas1 = Converter(12, "m")
+meas2 = Converter(0.232, "km")
+meas3 = Converter(1000001, "mm")
+meas4 = Converter(480, "in")
+
+invalid = Converter(100, "liters")
+
+# m test cases
+meas1.m()
+meas2.m()
+meas3.m()
+
+# yd test cases
+meas1.yd()
+meas2.yd()
+meas3.yd()
+
 
 
 
