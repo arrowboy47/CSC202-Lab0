@@ -45,3 +45,51 @@ print ("Price:",f2.getPrice())
 # the issue was that there was not proper indentation in the code
 
 # question 2  
+class Product:
+    def __init__(self, name, price, amount):
+        self.name = name
+        self.price = price
+        self.amount = amount
+    
+    def getPrice(self):
+
+        # under 10 items
+        if self.amount < 10:
+            return self.amount * self.price
+
+        # 10-99 items
+        elif self.amount >= 10 and self.amount <= 99:
+            # 10% discount
+            return self.amount * self.price * 0.9
+
+        # 100+ items
+        else:
+            # 20% discount
+            return self.amount * self.price * 0.8
+        
+        
+    def make_purchase(self, balance, quanity):
+        if self.name == "shirt":
+            self.balance = self.balance - 50 * self.quanity
+            
+        if self.name == "textbook":
+            self.balance = self.balance - 80 * self.quanity
+            
+        if self.name == "history book":
+            self.balance = self.balance - 50 * self.quanity
+            
+        if self.name == "memory card":
+            self.balance = self.balance - 140 * self.quanity
+            
+        if self.name == "wrist watch":
+            self.balance = self.balance - 120 * self.quanity
+
+# Question 3
+class Conveter:
+
+
+
+        
+
+
+
