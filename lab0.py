@@ -24,25 +24,6 @@ class Flower:
     def getPrice(self):
         return self.price
 
-#This would create first object of Flower class
-f1 = Flower("Sunflower", 2, 1000)
-print ("Flower Details:")
-print ("Name: ", f1.getName())
-print ("Number of petals:", f1.getPetals())
-print ("Price:",f1.getPrice())
-print ("\n")
-
-#This would create second object of Flower class
-f2 = Flower("Rose", 5, 2000)
-f2.setPrice(3333)
-f2.setPetals(6)
-print ("Flower Details:")
-print ("Name: ", f2.getName())
-print ("Number of petals:", f2.getPetals())
-print ("Price:",f2.getPrice())
-
-
-# the issue was that there was not proper indentation in the code
 
 # question 2  
 class Product:
@@ -85,7 +66,158 @@ class Product:
             self.balance = self.balance - 120 * self.quanity
 
 # Question 3
-class Conveter:
+class Converter:
+    def __init__(self, length, unit):
+        # error for when unit is not one of the excepted units
+        if unit not in ["m", "cm", "mm", "km", "yd", "ft", "in"]:
+            raise ValueError("unit must be one of m, cm, mm, km, yd, ft, in")
+        
+        self.length = length
+        self.unit = unit
+    
+    def m(self):
+        if self.unit == "m":
+            return self.length
+        elif self.unit == "cm":
+            return self.length / 100
+        elif self.unit == "mm":
+            return self.length / 1000
+        elif self.unit == "km":
+            return self.length * 1000
+        elif self.unit == "yd":
+            return self.length * 0.9144
+        elif self.unit == "ft":
+            return self.length * 0.3048
+        elif self.unit == "in":
+            return self.length * 0.0254
+        
+    def cm(self):
+        if self.unit == "m":
+            return self.length * 100
+        elif self.unit == "cm":
+            return self.length
+        elif self.unit == "mm":
+            return self.length / 10
+        elif self.unit == "km":
+            return self.length * 100000
+        elif self.unit == "yd":
+            return self.length * 91.44
+        elif self.unit == "ft":
+            return self.length * 30.48
+        elif self.unit == "in":
+            return self.length * 2.54
+
+    def mm(self):
+        if self.unit == "m":
+            return self.length * 1000
+        elif self.unit == "cm":
+            return self.length * 10
+        elif self.unit == "mm":
+            return self.length
+        elif self.unit == "km":
+            return self.length * 1000000
+        elif self.unit == "yd":
+            return self.length * 914.4
+        elif self.unit == "ft":
+            return self.length * 304.8
+        elif self.unit == "in":
+            return self.length * 25.4
+        
+    def km(self):
+        if self.unit == "m":
+            return self.length / 1000
+        elif self.unit == "cm":
+            return self.length / 100000
+        elif self.unit == "mm":
+            return self.length / 1000000
+        elif self.unit == "km":
+            return self.length
+        elif self.unit == "yd":
+            return self.length * 0.0009144
+        elif self.unit == "ft":
+            return self.length * 0.0003048
+        elif self.unit == "in":
+            return self.length * 0.0000254
+
+    def inch(self):
+        if self.unit == "m":
+            return self.length * 39.3701
+        elif self.unit == "cm":
+            return self.length * 0.393701
+        elif self.unit == "mm":
+            return self.length * 0.0393701
+        elif self.unit == "km":
+            return self.length * 39370.1
+        elif self.unit == "yd":
+            return self.length * 36
+        elif self.unit == "ft":
+            return self.length * 12
+        elif self.unit == "in":
+            return self.length
+
+    def ft(self):
+        if self.unit == "m":
+            return self.length * 3.28084
+        elif self.unit == "cm":
+            return self.length * 0.0328084
+        elif self.unit == "mm":
+            return self.length * 0.00328084
+        elif self.unit == "km":
+            return self.length * 3280.84
+        elif self.unit == "yd":
+            return self.length * 3
+        elif self.unit == "ft":
+            return self.length
+        elif self.unit == "in":
+            return self.length * 0.0833333
+
+    def yd(self):
+        if self.unit == "m":
+            return self.length * 1.09361
+        elif self.unit == "cm":
+            return self.length * 0.0109361
+        elif self.unit == "mm":
+            return self.length * 0.00109361
+        elif self.unit == "km":
+            return self.length * 1093.61
+        elif self.unit == "yd":
+            return self.length
+        elif self.unit == "ft":
+            return self.length * 0.333333
+        elif self.unit == "in":
+            return self.length * 0.0277778
+
+
+# test cases:
+
+
+#This would create first object of Flower class
+f1 = Flower("Sunflower", 2, 1000)
+print ("Flower Details:")
+print ("Name: ", f1.getName())
+print ("Number of petals:", f1.getPetals())
+print ("Price:",f1.getPrice())
+print ("\n")
+
+#This would create second object of Flower class
+f2 = Flower("Rose", 5, 2000)
+f2.setPrice(3333)
+f2.setPetals(6)
+print ("Flower Details:")
+print ("Name: ", f2.getName())
+print ("Number of petals:", f2.getPetals())
+print ("Price:",f2.getPrice())
+
+
+# the issue was that there was not proper indentation in the code
+
+# q2 test cases
+p1 = Product("shirt", 50, 5)
+print(p1.getPrice())
+
+p2 = Product("textbook", 80, 10)
+print(p2.getPrice())
+
 
 
 
