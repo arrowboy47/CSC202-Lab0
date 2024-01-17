@@ -75,6 +75,8 @@ class Converter:
         self.length = length
         self.unit = unit
     
+    
+    
     def m(self):
         if self.unit == "m":
             return self.length
@@ -122,6 +124,7 @@ class Converter:
             return self.length * 304.8
         elif self.unit == "in":
             return self.length * 25.4
+        
         
     def km(self):
         if self.unit == "m":
@@ -249,12 +252,3 @@ meas3.m()
 meas1.yd()
 meas2.yd()
 meas3.yd()
-
-
-
-
-
-        
-
-
-
