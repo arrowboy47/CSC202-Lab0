@@ -191,9 +191,6 @@ class Converter:
             return self.length * 0.0277778
 
 
-# test cases:
-
-
 #This would create first object of Flower class
 f1 = Flower("Sunflower", 2, 1000)
 print ("Flower Details:")
@@ -214,19 +211,6 @@ print ("Price:",f2.getPrice())
 
 # the issue was that there was not proper indentation in the code
 
-# q2 test cases
-p1 = Product("shirt", 50, 5)
-print(p1.getPrice())
-
-p2 = Product("textbook", 80, 10)
-print(p2.getPrice())
-
-p3 = Product("history book", 50, 100)
-
-# price test cases
-p1.getPrice()
-p2.getPrice()
-p3.getPrice()
 
 # make_purchase test cases
 p1.make_purchase(1000, 5)

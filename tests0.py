@@ -9,20 +9,39 @@ class TestProd(unittest.TestCase):
         self.assertEqual(result.price, 50)
         self.assertEqual(result.amount, 1)
 
-    
-
-
     def test_getPrice(self):
-        p1 = lab0.Product("textbook", 80, 10)
+        # 10-99 items
+        p1 = lab0.Product("textbook",80, 10)
         self.assertEqual(p1.getPrice(), 720)
 
+        # <5 items
+        p2 = lab0.Product("shirt", 50, 5)
+        self.assertEqual(p2.getPrice(), 250)
 
+        # 100+ items
+        p3 = lab0.Product("history book", 50, 100)
+        self.assertEqual(p3.getPrice(), 4000)
 
     def test_make_purchase(self):
+        # textbook test
+        p1 = lab0.Product("textbook",80, 10)
+        self.assertEqual(p1.make_purchase(1000, 10), 280)
+
+        # shirt test 
+        p2 = lab0.Product("shirt", 50, 5)
+        self.assertEqual(p2.make_purchase(1000, 5), 750)
 
 
+class TestConvert(unittest.TestCase):
+    # testing converter class creation
+    def test_name(self):
+        # incorrect unit name
+        self.assertRaises(ValueError, lab0.Converter, 1, 'liters')
 
-#class TestConvert(unittest.TestCase):
+        measure = lab0.Converter(1, 'm')
+        self.assertEqual(measure.unit, 'm')
+    
+    # testing conversion method
 
 
 
