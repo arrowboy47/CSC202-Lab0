@@ -75,8 +75,6 @@ class Converter:
         self.length = length
         self.unit = unit
     
-    
-    
     def m(self):
         if self.unit == "m":
             return self.length
@@ -208,24 +206,4 @@ print ("Name: ", f2.getName())
 print ("Number of petals:", f2.getPetals())
 print ("Price:",f2.getPrice())
 
-
 # the issue was that there was not proper indentation in the code
-
-
-# q3 test cases
-meas1 = Converter(12, "m")
-meas2 = Converter(0.232, "km")
-meas3 = Converter(1000001, "mm")
-meas4 = Converter(480, "in")
-
-invalid = Converter(100, "liters")
-
-# m test cases
-meas1.m()
-meas2.m()
-meas3.m()
-
-# yd test cases
-meas1.yd()
-meas2.yd()
-meas3.yd()
