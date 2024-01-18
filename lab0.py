@@ -212,13 +212,6 @@ print ("Price:",f2.getPrice())
 # the issue was that there was not proper indentation in the code
 
 
-# make_purchase test cases
-p1.make_purchase(1000, 5)
-
-p2.make_purchase(1000, 10)
-
-
-
 # q3 test cases
 meas1 = Converter(12, "m")
 meas2 = Converter(0.232, "km")

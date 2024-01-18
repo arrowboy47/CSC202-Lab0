@@ -41,10 +41,37 @@ class TestConvert(unittest.TestCase):
         measure = lab0.Converter(1, 'm')
         self.assertEqual(measure.unit, 'm')
     
-    # testing conversion method
+    # testing method
+    def test_m(self):
+        # m to m
+        measure = lab0.Converter(1, 'm')
+        self.assertEqual(measure.m(), 1)
+
+        # cm to m
+        measure = lab0.Converter(100, 'cm')
+        self.assertEqual(measure.m(), 1)
+
+        # mm to m
+        measure = lab0.Converter(1000, 'mm')
+        self.assertEqual(measure.m(), 1)
+
+        # km to m
+        measure = lab0.Converter(1, 'km')
+        self.assertEqual(measure.m(), 1000)
+
+        # yd to m
+        measure = lab0.Converter(1, 'yd')
+        self.assertEqual(measure.m(), 0.9144)
+
+        # ft to m
+        measure = lab0.Converter(1, 'ft')
+        self.assertEqual(measure.m(), 0.3048)
+
+        # in to m
+        measure = lab0.Converter(1, 'in')
+        self.assertEqual(measure.m(), 0.0254)
 
 
-
-#allows us to run unit tests from command line with just: "python tests0.py"
+# allows us to run unit tests from command line with just: "python tests0.py"
 if __name__ == '__main__':
     unittest.main()
